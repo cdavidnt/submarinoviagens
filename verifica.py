@@ -2,19 +2,27 @@
 
 import time
 import sys, traceback
-from utils.setup import Configuration
+from utils.config.setup import Configuration
+from utils.builders.url import URLBuilder
 
 from selenium import webdriver
 from notifier import Notifier
 
 config = Configuration()
 config.load()
+origem = config.getProperty("origem")
+destino = config.getProperty("destino")
+dataida = config.getProperty("datadeida")
+datavolta = config.getProperty("datadevolta")
+somenteida = config.getProperty("somenteida")
+quantidadeadultos = config.getProperty("quantidadeadultos")
+quantidadecriancas = config.getProperty("quantidadecriancas")
 
 email = Notifier(config.getProperty("email"),config.getProperty("password"))
 
 
 driver = webdriver.Firefox()
-driver.get(config.getProperty("url"))
+driver.get(URLBuilder.build(origem, destino, dataida, datavolta, quantidadeadultos, quantidadecriancas, somenteida))
 
 contador = 0
 
