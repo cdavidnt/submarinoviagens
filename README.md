@@ -1,3 +1,8 @@
+# REQUERIMENTOS #
+
+Python 2.7
+pip
+
 ## SETUP ##
 
 pip install -r requirements
@@ -14,3 +19,7 @@ url = http://www.submarinoviagens.com.br/Passagens/selecionarvoo?SomenteIda=fals
 
 email = [seu e-mail no GMAIL]
 password = [senha do seu GMAIL]
+
+## RODANDO O PROGRAMA ##
+
+python verifica.py
