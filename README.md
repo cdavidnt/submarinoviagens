@@ -1,3 +1,9 @@
+# SOBRE #
+
+Programa de pesquisa de passagens no site http://www.submarinoviagens.com.br/
+Ao ser executado, o programa faz uma busca a cada 10 minutos no site para busca de passagens e envia um e-mail caso o preço da passagem tenha mudado
+
+
 # REQUERIMENTOS #
 
 Python 2.7  
